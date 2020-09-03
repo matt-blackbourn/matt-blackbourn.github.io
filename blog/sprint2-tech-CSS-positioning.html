@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Matt Blackbourn Blog</title>
+   <link rel="stylesheet" href="styles/main.css">
+   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
+   <style>
+      .image-shrink{
+         width: 200px;
+      }
+      .image-shrink-2{
+         width: 400px;
+      }
+      div{
+         width: 60%;
+         margin: 0 auto;
+      }
+   </style>
+</head>
+<body>
+   <div>
+   <h1>Tech Blog - CSS Position</h1>
+   <h2>Comparing Relative, Absolute and Fixed positioning</h2>
+   <p>This blog will cover what relative, absolute and fixed positioning are, and will include an example to illutrate how they can be used on a page to position elements.</p>
+
+   <p>The setup I'll be using to demonstrate these properties is shown below, and has one parent element that is acting as a container, which is blue. Then we have three child elements, each a div that I will used to demonstrate how each positiong property works.</p>
+
+   <img src="../images/CSS-positioning/img1-setup.png" alt="Div Setup" class="image-shrink">
+
+   <h3>Relative Position</h3>
+
+   <p>First, lets cover relative positioning. This is done in CSS with the code: position: relative;</p>
+   <p>This line on its own will not move the element, as any element with position relative stays in its <em>relative</em> place in the flow of the document. In our case this means that becasue the "relative" div (green) is located between the "fixed" (orange) and "absolute" (red) divs in the HTML, it will remain in that original document's flow. </p>
+   <p>However, now that the element is positioned relatively, it allows us to specifically locate that element whereever we want to, relative to its original position in the HTML. We can use the "positional" properties: top, left, bottom, right, and z-index (z-index not covered in this blog) to achieve this movement, as shown in the code below:</p>
+
+   <img src="../images/CSS-positioning/img2-relative-code.png" alt="Relative Code">
+
+   <p>As you can see, the effect this code has is to move the relative div 20 pixels <em>from the left</em> , and 70 pixels <em>from the top.</em> Note that these measurements are <em>relative</em> to its original position, and so it moves 20 pixels from the parent div's edge, and 70 pixels from the "fixed" div's edge.</p>
+
+   <img src="../images/CSS-positioning/img3-relative.png" alt="Relatative Position Result" class="image-shrink">
+
+   <h3>Absolute Position</h3>
+
+   <p>Next up is absolute position. This is done in CSS with the code: position: absolute;</p>
+   <p>Unlike a relatively positioned element, an element with position: absolute is removed from the flow of the document, ie, it is no longer bound by its parent element, and instead can be adjusted relative to the document itself. Once given a the position: absolute property, we can then use the same positional properties to move the element around in the document. In order to demonstrate this, I'll use the following code:</p>
+
+   <img src="../images/CSS-positioning/img4-absolute-code.png" alt="Absolute Code">
+
+   <p>As you can see, this has a dramatic affect due to the absolute element no longer being bound by the blue parent element, and is instead being positioned relative to the main document. Specifically, the element has now been moved to 100px <em>from the left</em> of the window/document and 100px <em>from the top </em>of the window/document. Note, if we wanted it to remain within the parent element and position it absolutely <em>within</em> that element, we could set the parent element to position: relative.</p>
+
+   <img src="../images/CSS-positioning/img5-absolute.png" alt="Absolute position result" class="image-shrink-2">
+
+   <h3>Fixed Position</h3>
+
+   <p>Fixed postion is done in CSS with the code: postion: fixed;</p>
+   <p>Fixed position elements behave similarly to absolutely positioned elements; they are removed from the flow of the document and are positioned relative to the document/window. Once an element has the position: fixed property applied, the same positional properties can be used to move the element around the document, with one difference: the element is now <em>fixed</em> to the page, and is unaffected by scrolling - meaning that no matter how far you scroll, that element will remain in the position that it has been fixed in.</p>
+
+   <p>To demonstrate this, I have used the following code to fix the yellow element in place:</p>
+
+   <img src="../images/CSS-positioning/img6-fixed-code.png" alt="Fixed Code">
+
+   <p>This has moved the fixed element to 100 pixels <em>from the bottom</em> of the document/window. Also note, that the "relative" div we positioned earlier has moved up slightly, because the fixed element has been removed from the original flow of the document - this means the relative div is now acting as if it is the first element in the HTML, and is now 70 pixels from the top of its parent element, not from the the fixed element.</p>
+
+   <img src="../images/CSS-positioning/img7-fixed.png" alt="Fixed position result" class="image-shrink-2">
+
+   <p>This is very similar to the absolutely positioned element, with the only difference being that this element is now fixed to this position when a user scrolls. You can see from the image below that as I scroll down the page, this element stays in the same position <em>relative</em> to the window.</p>
+
+   <img src="../images/CSS-positioning/img8-fixed-result.png" alt="Scrolling with fixed position" class="image-shrink-2">
+
+   <h3>Summary</h3>
+
+   <p>As you can see, the position relative, absolute and fixed properties are very useful for positioning elements on a web page. Once any of them are applied to an element, the additional positional properties can be used to manouvre them to where ever they need to go. They can be tricky at first, but like anything, with some practice and experimentation it gets easier. I have included a link to the source code <a href="#">here</a> used for this blog so you can clone and play with it yourself. Thanks for reading and let me know if this was helpfulfor you!</p>
+
+   <a href="../index.html">Home</a>
+
+   </div>
+</body>
+</html>
