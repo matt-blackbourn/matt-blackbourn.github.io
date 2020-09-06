@@ -1,0 +1,16 @@
+body{
+   font-family: 'Inconsolata', monospace;
+}
+
+.container{
+   width: 60%;
+   margin: 0 auto;
+}
+
+/* for css positioning images */
+.image-shrink{
+   width: 200px;
+}
+.image-shrink-2{
+   width: 400px;
+}
