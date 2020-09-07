@@ -20,9 +20,9 @@ h1{
    padding: 20px;
  }
  
- h4{
+h4{
     margin-bottom: 20px;
-    color: #b7b7b7;
+    color: #b8383f;
 }
 
 table{
@@ -35,12 +35,17 @@ td{
    padding: 10px;
    width: 30%;
 }
-span{
-   color: #b7b7b7;
-}
+
 a{
-   color: white;
+   color: #b7b7b7;
    text-decoration: none;
+   transition: .4s;
 }
+
+a:hover{
+   color: #b8383f;
+}
+
+
 
 
