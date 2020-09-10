@@ -20,3 +20,12 @@ body{
       width: 100%;
    }
 }
+
+.code-tab{
+   padding-left: 30px;
+}
+
+.links{
+   display: flex;
+   justify-content: space-around;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JS, DevTools and the DOM!</title>
+   <link rel="stylesheet" href="../styles/blogs.css">
+   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="container">
+      <h1 id="top">JS, DevTools and the DOM!</h1>
+      <h3>HTML vs CSS</h3>
+      <p>I like to think of HTML being like the foundations, framework, roof etc of a house, and the CSS is like the decorations - the paint, the carpets, and the furniture in the house. You cannot have the decorations without the house to begin with, and in the same way you can't have CSS without the HTML being there first.</p>
+
+      <h3>Control FLow</h3>
+      <p>Control flow is the process of making decisions in code. In every day life, we do the same sort of decision making, for example, cooking dinner. You decide you want to eat steak, so the first thing you need to do is check whether you have any. If you do, you can start cooking. If not, you need to go to the supermarket. So the control flow code might look like:</p>
+      <p>if (fridgeContents === steak) {</p>
+      <p><span class="code-tab">startCooking()</span></p>
+      <p>} else {</p>   
+      <p><span class="code-tab">goToSupermarket()</span></p>   
+      <p>}</p>   
+
+      <h3>Loops</h3>
+      <p>To continue with the cooking dinner analogy, we can assume that we now have the steak, and now we decided we want to have mushroom sauce with it, and our flatmate has offered to help prepare dinner - so we need to give him some instructions. We want him to cut up all the mushrooms in the bag we bought from the supermarket. This is easy enough, but trying to tell a computer to do this is slightly more difficult. For example, we can tell it to "cutUpMushroom()", but then it will just cut up one mushroom. Instead, we can use a loop:  </p>
+
+      <p>while (mushroomsInBag > 0) {</p>
+         <p><span class="code-tab">cutUpMushroom()</p>
+         <p><span class="code-tab">mushroomsInBag --</p>
+      <p>}</p>
+      
+      <p>We are telling the computer that as long as there are more than zero mushrooms in the bag, keep cutting them up! The loop finishes when there are no more mushrooms left to cut.</p>
+
+      <h3>The DOM</h3>
+      <p>The DOM stands for Document Object Model, and describes the structure of a web page. It is like a tree structure full of HTML elements, and we can use Javascript to interact with it. For example, we can use an event listener on a certain element to tell when a user clicks on it - and once that happens, carry out an action of our choosing. We could make an alert pop up, change the colour of some text, of make something disappear from the page. This is all done with DOM manipulation, first by selecting an element on the page, and then changing it in some way.</p>
+
+      <h3>Arrays vs Objects</h3>
+      <p>The difference between arrays and objects is that an array is structured like a list, and every piece of data is assigned an index. Becasue of this, we can access a piece of data inside an array using the square bracket notation, followed by the index of the item we want. For example:</p>
+      <p><span class="code-tab"></span>myArray[3] would access the item at index 3, (which is the fourth item because the first item is index 0) from myArray.</p>
+      <p>Objects are slightly different, because they are less structured, and store data in key/value pairs. We can access this data using square bracket notation as well, but can also use dot notation. For example:</p>
+
+      <p><span class="code-tab"></span>myObject.name would access the value stored under the key "name" from myObject.</p>
+
+      <h3>Functions</h3>
+      <p>A function is simply a package of code which can be used at any time to do something. They are useful becasue they make code more modular and re-usable - once you have written a function once, you can call that function as many times in your code as you want to, and dont have to re-write it. This makes code faster and easier to write, and much clearer to read and understand. </p>
+      
+      <div class="links">
+         <a href="../index.html">Home</a>
+         <a href="#top">Top of page</a>
+      </div>         
+       
+   </div>
+   
+</body>
+</html>
