@@ -16,24 +16,34 @@ body{
    text-align: center;
 }
 
+.flex-container{
+   display: flex;
+   margin: 0 auto;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   max-width: 1000px;
+}
+
+.sprint{
+   min-width: 150px;
+}
+
+
 h1{
    padding: 20px;
  }
  
 h4{
     margin-bottom: 20px;
-    color: #e6683b;
+    color: #e7442e
 }
 
-table{
-   padding: 0;
-   margin: auto;
-   width: 50%;
+ul{
+   list-style-type: none;
 }
 
-td{
-   padding: 10px;
-   width: 30%;
+li{
+   margin-bottom: 7px;
 }
 
 a{
@@ -43,7 +53,11 @@ a{
 }
 
 a:hover{
-   color: #e6683b;
+   color: #e7442e;
+}
+
+.sprint h4{
+   color: white;
 }
 
 
