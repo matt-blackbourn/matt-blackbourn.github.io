@@ -1,5 +1,6 @@
 body{
    font-family: 'Inconsolata', monospace;
+   background-color: #c1c1c1;
 }
 
 .container{
@@ -7,18 +8,11 @@ body{
    margin: 0 auto;
 }
 
-/* for css positioning images */
 .image-shrink{
    width: 200px;
 }
 .image-shrink-2{
    width: 400px;
-}
-
-@media screen and (max-width: 480px){
-   .container{
-      width: 100%;
-   }
 }
 
 .code-tab{
@@ -28,4 +22,27 @@ body{
 .links{
    display: flex;
    justify-content: space-around;
+   margin-top: 20px;
+   margin-bottom: 50px;
+}
+
+a{
+   color: #79443d;
+   font-size: 1.3em;
+   text-decoration: none;
+   transition: .4s;
+}
+
+a:hover{
+   color: #e7442e;
+}
+
+h3{
+   color: #79443d;
+}
+
+@media screen and (max-width: 480px){
+   .container{
+      width: 100%;
+   }
 }
